@@ -9,6 +9,8 @@ load_dotenv()
 GEMINI_PRO_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_PRO_API_KEY)
 
+st.title("✨ AI Storyteller: Craft, Enhance, and Polish Your Stories")
+
 def start_gemini_chat():
     model = genai.GenerativeModel("gemini-1.5-flash")
     chat = model.start_chat(
